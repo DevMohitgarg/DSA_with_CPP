@@ -1,24 +1,19 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main()
+int Arraysum(vector<int> &arr)
 {
-  int arr[1000];
-  int size;
+  int size = arr.size();
   int sum = 0;
 
-  cout<<"Enter the size of an array: ";
-  cin>>size;
-  
-  for(int i=0;i<size;i++)
-  {
-    cin>>arr[i];
-  }
-
-  for(int i=0;i<size;i++)
+  for (int i = 0; i < size; i++)
   {
     sum += arr[i];
   }
-
-  cout<<"Sum of the array elements is: "<<sum<<endl;
- return 0;
+  return sum;
+}
+int main()
+{
+  vector<int> arr={1,2,3,4,5,6};
+  cout << "Sum of the array elements is: " << Arraysum(arr) << endl;
+  return 0;
 }
